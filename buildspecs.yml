@@ -26,10 +26,10 @@ phases:
   build:
     on-failure: ABORT   
     commands:
-    # Project-1: VPC, ASG, ALB, Route53, ACM, Security Groups
       - cd "$CODEBUILD_SRC_DIR/"
       - terraform --version
       - terraform init 
+      - aws s3 cp s3://network-prod-e1-terraformstate/aws_orga/terraform.tfstate
       - terraform validate
       - terraform plan          
       - terraform $TF_COMMAND -auto-approve  

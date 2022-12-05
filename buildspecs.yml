@@ -29,10 +29,9 @@ phases:
       - cd "$CODEBUILD_SRC_DIR/"
       - terraform --version
       - terraform init 
-      - aws s3 cp s3://network-prod-e1-terraformstate/aws_orga/terraform.tfstate .
       - terraform validate
       - terraform plan          
-      - terraform $TF_COMMAND -auto-approve  
+      #- terraform $TF_COMMAND -auto-approve  
   post_build:
     on-failure: CONTINUE   
     commands:

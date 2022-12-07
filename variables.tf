@@ -11,13 +11,13 @@ variable "organization_unit" {
 variable "ou_account_name" {
     description = "Value for the OU Name"
     type = list(string)
-    default = [ "security" ]
+    default = [ "security","network" ]
   
 }
 variable "ou_account_email" {
     description = "Value for the Email"
     type = list(string)
-    default = [ "securit.srrealinvestment@gmail.com" ]
+    default = [ "securit.srrealinvestment@gmail.com","netrowk.srrealinvestment@gmail.com" ]
   
 }
 variable "allow_access_to_billing" {

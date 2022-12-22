@@ -66,5 +66,5 @@ resource "aws_organizations_policy" "restrict_regions" {
 
 resource "aws_organizations_policy_attachment" "restrict_regions_on_root" {
   policy_id = aws_organizations_policy.restrict_regions.id
-  target_id = aws_organizations_organization.my_org.roots[0].id
+  target_id = aws_organizations_organizational_unit.OU[0].id
 }

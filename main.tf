@@ -13,6 +13,8 @@ resource "aws_organizations_organization" "my_org" {
   aws_service_access_principals = [
     "cloudtrail.amazonaws.com",
     "config.amazonaws.com",
+    "fms.amazonaws.com",
+    "sso.amazonaws.com",
     ]
   enabled_policy_types = [
            "SERVICE_CONTROL_POLICY",

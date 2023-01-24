@@ -8,3 +8,4 @@ Both the variable are in List format so add the values as comma separated
 The repo is also being used for creating the SCP on AWS Org Account
 
 Inorder to destroy the resources Created kindly update buildspecs.yml and uncomment Terraform Destroy line. Additionally Comment the Terraform Apply line
+Will require approval to destroy the resources
